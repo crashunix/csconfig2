@@ -53,5 +53,4 @@ ionic serve
 
 Isso iniciará o aplicativo no navegador padrão, onde você poderá interagir com a interface de configuração e execução de binds do CS:GO.
 
-Observação
-Este projeto utiliza o gerenciador de pacotes pnpm como uma alternativa ao npm ou yarn. O pnpm oferece uma experiência de instalação mais rápida e eficiente, além de economizar espaço em disco. Se preferir usar npm ou yarn, você pode substituir os comandos pnpm pelos equivalentes do npm ou yarn. Certifique-se de atualizar os comandos no README e nas configurações de scripts de acordo.
+Este projeto utiliza o gerenciador de pacotes pnpm como uma alternativa ao npm ou yarn. O pnpm oferece uma experiência de instalação mais rápida e eficiente, além de economizar espaço em disco. Se preferir usar npm ou yarn, você pode substituir os comandos pnpm pelos equivalentes do npm ou yarn.
