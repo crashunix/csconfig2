@@ -1,5 +1,5 @@
 # CSConfig
-O CSConfig é um app para configuração e execução de binds para o jogo CS:GO em tempo real. O servidor foi desenvolvido em Electron + Express, enquanto o cliente é um aplicativo Ionic + Angular.
+O CSConfig é um app para configuração e execução de binds em tempo real para o jogo CS:GO. O servidor foi desenvolvido em Electron + Express, enquanto o cliente é um aplicativo Ionic + Angular.
 
 ## Instalação
 Experimente utilizar o pnpm para gerenciar as dependências deste projeto.
