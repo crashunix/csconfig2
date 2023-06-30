@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <app-header title="Crosshair" />
+  <div class="p-4">
+    <span>Gap = {{currentCrosshairGap}}</span>
+    <div class="grid grid-cols-2 gap-2">
+      <ion-button (click)="setCrosshair('gap', -1)">-</ion-button>
+      <ion-button (click)="setCrosshair('gap', 1)">+</ion-button>
+    </div>
+    <span class="mt-10">Size = {{currentCrosshairSize}}</span>
+    <div class="grid grid-cols-2 gap-2">
+      <ion-button (click)="setCrosshair('size', -1)">-</ion-button>
+      <ion-button (click)="setCrosshair('size', 1)">+</ion-button>
+    </div>
+    <span class="mt-10">Scale = {{currentCrosshairScale}}</span>
+    <div class="grid grid-cols-2 gap-2">
+      <ion-button (click)="setCrosshair('scale', -1)">-</ion-button>
+      <ion-button (click)="setCrosshair('scale', 1)">+</ion-button>
+    </div>
+    <span class="mt-10">Thickness = {{currentCrosshairThickness}}</span>
+    <div class="grid grid-cols-2 gap-2">
+      <ion-button (click)="setCrosshair('thickness', -1)">-</ion-button>
+      <ion-button (click)="setCrosshair('thickness', 1)">+</ion-button>
+    </div>
+    <span class="mt-10">T = {{currentCrosshairT}}</span>
+    <div class="grid grid-cols-2 gap-2">
+      <ion-button (click)="setCrosshair('t', -1)">-</ion-button>
+      <ion-button (click)="setCrosshair('t', 1)">+</ion-button>
+    </div>
+  </div>
+</ion-content>

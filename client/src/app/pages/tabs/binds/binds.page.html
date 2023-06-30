@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true">
+  <app-header title="Say" />
+  <div class="p-4">
+    <div class="grid grid-cols-2 gap-2" *ngIf="messages.length">
+      <button [disabled]="cooldown || !isConnected()" [ngClass]="{'opacity-70': cooldown || !isConnected()}" (click)="pushMessage(item.text)" class="aspect-video bg-blue-900 rounded-lg p-4 pt-6 flex flex-col justify-between" *ngFor="let item of messages" [ngStyle]="{'backgroundColor': item.color}">
+        <span class="font-medium text-white">{{item.title}}</span>
+        <p class="max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
+          {{item.text}}
+        </p>
+      </button>
+    </div>
+    <p *ngIf="!messages.length" class="text-sm text-gray-300 text-center">Nenhuma mensagem</p>
+  </div>
+  <!-- <div class="flex flex-col px-4">
+    <ion-button *ngFor="let item of messages" [disabled]="cooldown" expand="block"
+      (click)="pushMessage(item.text)">{{item.title}}</ion-button>
+  </div> -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="setOpen(true)">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Nova mensagem</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+            <ion-button (click)="newMessage()">Save</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <form [formGroup]="messageForm">
+          <ion-input type="text" formControlName="title" placeholder="Title" />
+          <ion-textarea formControlName="text" label="Message" placeholder="Já vai boltz?"></ion-textarea>
+          <!-- <ion-input type="color" formControlName="color" placeholder="Color" /> -->
+          <ion-list>
+            <ion-list-header>
+              <ion-label>Cor</ion-label>
+            </ion-list-header>
+          
+            <ion-item>
+              <ion-chip *ngFor="let color of colors" (click)="selectColor(color.value)" class="aspect-square hover:scale-110 transition-transform" [style.background]="color.value"></ion-chip>
+            </ion-item>
+          </ion-list>
+          <!-- <button type="submit" [disabled]="!messageForm.valid">Submit</button> -->
+        </form>
+        <!-- <ion-input [(ngModel)]="message" placeholder="Message"></ion-input> -->
+        <!-- <ion-textarea [(ngModel)]="message" label="Message" placeholder="Já vai boltz?"></ion-textarea> -->
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

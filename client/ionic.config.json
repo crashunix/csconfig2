@@ -1,0 +1,8 @@
+{
+  "name": "csconfig2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "1579ef60"
+}

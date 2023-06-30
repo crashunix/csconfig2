@@ -1,0 +1,13 @@
+<!-- <header class="p-4 flex justify-between items-center">
+  <h1>{{title}}</h1>
+  <span>{{ isLoading() ? 'Conectando...' : isConnected() ? 'Conectado' : 'Desconectado'}}</span>
+</header> -->
+<ion-header class="bg-gray-900">
+  <ion-toolbar>
+    <ion-title class="text-gray-100">{{title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-label class="text-gray-100 text-capitalize mr-4">{{ isLoading() ? 'Conectando...' : isConnected() ? 'Conectado' : 'Desconectado' }}</ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="h-2px bg-gradient-to-r duration-500" [ngClass]="{'from-blue-400 to-purple-500': isLoading(), 'from-green-400 to-teal-500': isConnected(), 'from-red-400 to-pink-500': !isConnected()}"></div>
+</ion-header>
